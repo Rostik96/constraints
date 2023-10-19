@@ -1,0 +1,13 @@
+hibernate:
+  validator:
+    apply_to_ddl: false
+
+spring:
+  test:
+    database:
+      replace: none
+  jpa:
+    hibernate:
+      ddl-auto: create
+logging:
+  config: classpath:logback-test.xml

@@ -1,0 +1,16 @@
+<!-->Recommended configuration to avoid massive boilerplate logs<-->
+<!-->https://java.testcontainers.org/supported_docker_environment/logging_config/<-->
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+    <logger name="com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.headers" level="OFF" />
+    <logger name="httpclient" level="OFF" />
+</configuration>
